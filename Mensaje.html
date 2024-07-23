@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENSAJE PARA MI JAQUELINE</title>
+<style>   
+
+  
+
+        body 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://your-background-image-url.com') no-repeat center center fixed;
+            background-size: cover;
+
+
+            background-image: url(https://www.10wallpaper.com/wallpaper/1920x1080/1210/rain_cloud-autumn_landscape_Wallpaper_1920x1080.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+        }
+        .envelope {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            background: rgb(120, 120, 193);
+            cursor: pointer;
+        }
+        .envelope::before, .envelope::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 150px;
+            background: rgb(120, 120, 193);
+            transform-origin: top;
+            transition: transform 0.5s ease-in-out;
+        }
+        .envelope::before {
+            top: 0;
+            left: 0;
+            transform: rotateX(0deg);
+        }
+        .envelope::after {
+            bottom: 0;
+            left: 0;
+            transform: rotateX(0deg);
+        }
+        .envelope.open::before {
+            transform: rotateX(180deg);
+        }
+        .envelope.open::after {
+            transform: rotateX(-180deg);
+        }
+        .message {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #333;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12;
+        }
+        .envelope.open .message {
+            display: block;
+        }
+        .heart {
+            position: absolute;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            background: white;
+            clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 80%, 25% 100%, 0% 35%);
+            animation: floatUp 2s infinite ease-in-out;
+        }
+        @keyframes floatUp {
+            0% {
+                bottom: 200;
+                opacity: 100;
+            }
+            100% {
+                bottom: 200px;
+                opacity: 200;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="envelope" onclick="openEnvelope()">
+
+   
+<div class="message">
+        
+ <p>      
+¡TE AMO!<br>
+
+Espero que si enverdad ya hallas comido mi amor y no me estes engañando<br>
+
+
+</p>  
+<div class="heart" style="left: 10%; animation-delay: 0s;"></div>       
+<div class="heart" style="left: 20%; animation-delay: 0.5s;"></div>
+<div class="heart" style="left: 30%; animation-delay: 1s;"></div>
+<div class="heart" style="left: 40%; animation-delay: 0s;"></div>       
+<div class="heart" style="left: 50%; animation-delay: 0.5s;"></div>
+<div class="heart" style="left: 60%; animation-delay: 1s;"></div>
+<div class="heart" style="left: 70%; animation-delay: 0s;"></div>       
+<div class="heart" style="left: 80%; animation-delay: 0.5s;"></div>
+<div class="heart" style="left: 90%; animation-delay: 1s;"></div>
+<div class="heart" style="left: 100%; animation-delay: 0s;"></div>       
+<div class="heart" style="left: 5%; animation-delay: 0.5s;"></div>
+<div class="heart" style="left: 15%; animation-delay: 1s;"></div>
+<div class="heart" style="left: 25%; animation-delay: 1s;"></div>
+<div class="heart" style="left: 35%; animation-delay: 0s;"></div>       
+<div class="heart" style="left: 45%; animation-delay: 0.5s;"></div>
+<div class="heart" style="left: 55%; animation-delay: 1s;"></div>
+<div class="heart" style="left: 65%; animation-delay: 0s;"></div>       
+<div class="heart" style="left: 75%; animation-delay: 0.5s;"></div>
+<div class="heart" style="left: 85%; animation-delay: 1s;"></div>
+<div class="heart" style="left: 95%; animation-delay: 1s;"></div>
+<div class="heart" style="left: 105%; animation-delay: 0s;"></div>       
+<div class="heart" style="left: 115%; animation-delay: 0.5s;"></div>
+<script>
+    function openEnvelope() {
+        document.querySelector('.envelope').classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
