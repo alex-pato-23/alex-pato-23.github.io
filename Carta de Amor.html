@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para mi Novia</title>
+    <style>
+        body {
+            background-image: url(https://pics.filmaffinity.com/Your_Name-968859924-large.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: 255, 255, 255, 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+
+            
+        }
+        .envelope {
+            width: 300px;
+            height: 200px;
+            background-color: 255, 255, 255, 0;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+        .envelope:hover {
+            transform: scale(1.05);
+        }
+        .flap {
+            width: 300px;
+            height: 100px;
+            background-color: 255, 255, 255, 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            transition: transform 0.5s;
+        }
+        .flap.open {
+            transform: rotateX(180deg);
+        }
+        .message {
+            width: 100%;
+            height: 100%;
+            background-color: 255, 255, 255, 0 ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display:block;
+            justify-content:baseline;
+            align-items: center;
+            transform: rotateX(90deg);
+            backface-visibility: hidden;
+            transition: transform 0.5s;
+        }
+        .message.open {
+            transform: rotateX(0);
+        }
+        .message p {
+            padding: 20px;
+            font-size: 1.2em;
+            text-align: center;
+            color: #6a5d4d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="envelope" onclick="openEnvelope()">
+    <div class="flap"></div>
+    <div class="message">
+        <p>Querida Jaqueline.<br><br>
+        Esta carta es para decirte lo mucho que te amo y aprecio. Eres mi mundo y no puedo imaginar mi vida sin ti.<br><br>
+        Con todo mi amor,<br>
+        Sabes que eres una persona muy importante para mi y que eres quien me saco de mis peores momentos cuando mas mal me encontraba
+        te agradesco por haberme dado la oportunidad de conocernos de ser amigos porque sin pensar dejamos de serlo aun cuando mas me llegaste<br>
+        a rechazar fue cuando mas perseverancia tuve de querer estar contigo.
+        pido una disculpa de ser una persona tan terca que se aferro a una mujer tan hermosa y bella como tu pero cuando mas me veia reflejado en ti<br>
+        mas me queria quedar, mas queria estar en tu lado porque se que somos el uno para el otro pero el destino no quiso juntar tan pronto tuvimos que pasar
+        por varios procesos cada uno, uno tuvo que odiar al otro y uno no sabia que la mujer de su vida estuvo enfrente de el, uno le agarro coraje al otro<br>
+        y el otro era muy distraido pero pues como bien dice el dicho DEL ODIO AL AMOR SOLO EXISTE UN SOLO PASO.<br><br>
+        TE AMO MI MAMI<br><br>
+        De Alejandro</p>
+    </div>
+</div>
+
+<script>
+    function openEnvelope() {
+        document.querySelector('.flap').classList.toggle('open');
+        document.querySelector('.message').classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
